@@ -9,3 +9,7 @@ class CardList(generics.ListCreateAPIView):
 	permission_classes = (AllowAny,)
 
 
+class CardDetail(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Card.objects.all()
+	serializer_class = CardSerializer
+	permission_classes = (AllowAny,)
